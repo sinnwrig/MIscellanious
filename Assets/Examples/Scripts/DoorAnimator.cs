@@ -17,6 +17,11 @@ public class DoorAnimator : MonoBehaviour
         isOpen = !isOpen;
     }
 
+    public void Open() => isOpen = true;
+
+    public void Close() => isOpen = false;
+
+
     void Update()
     {
         openState = Mathf.MoveTowards(openState, isOpen ? 0.01f : openTime, Time.deltaTime);
